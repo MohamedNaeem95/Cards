@@ -1,0 +1,63 @@
+body {
+  background-color: #ecf0f1;
+}
+body .cards {
+  padding: 30px 0;
+  margin: 0 auto;
+}
+body .text-medium {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ecf0f1;
+}
+body .card {
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  box-shadow: 2px 2px 2px black;
+  margin-top: 20px;
+}
+body .card:hover {
+  transform: translateY(-7px);
+}
+body .card-image-container {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+body img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .card-content {
+  padding: 10px;
+}
+body .card-title {
+  /*margin-bottom: 0 auto;*/
+  color: black;
+}
+body .card-info {
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+body .text-medium {
+  color: black;
+  margin-top: 0;
+}
+body .btn-card {
+  margin-left: auto;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid black;
+  position: relative;
+  right: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

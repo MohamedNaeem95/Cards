@@ -1,0 +1,86 @@
+// My Varibales 
+$lead-map :(light:#ecf0f1, dark:black, red:red , white:white);
+$font-map :(font1:16px , font2:22px);
+
+@mixin text-mid {
+    font-family: "Open Sans", sans-serif;
+    font-size: map-get($font-map , font1);
+    line-height: 20px;
+    font-weight: 400;
+    color: map-get($lead-map , light);
+}
+@mixin card {
+    background-color: map-get($lead-map , white );
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    box-shadow: 2px 2px 2px black;
+    margin-top: 20px;
+}
+@mixin card-images {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+}
+@mixin img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin card-info {
+    display: flex;
+    align-self: end;
+    align-items: center;
+}
+@mixin Button {
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    right: 20px;
+}
+body{
+    background-color: map-get($lead-map , light);
+    .cards{
+        padding: 30px 0;
+        margin: 0 auto;
+    
+    }
+    .text-medium {
+
+        @include text-mid
+    }
+    
+    .card {
+       @include card
+    }
+    .card:hover{
+        transform: translateY(-7px);
+    }
+    .card-image-container {
+      @include card-images
+    }
+     img {
+      @include img
+    }
+    .card-content {
+        padding: 10px;
+    }
+    .card-title {
+        /*margin-bottom: 0 auto;*/
+        color: map-get($lead-map, dark);     
+    }
+    .card-info {
+       @include card-info
+    }
+    .text-medium{
+        color: map-get($lead-map , dark);
+        margin-top: 0;
+    }
+    .btn-card {
+        @include Button
+    }
+}
